@@ -2,6 +2,8 @@
 
 This is the frontend for the **ImageGram** project, a social media platform that allows users to upload images, comment on posts, and interact with other users. The frontend is built with **React**, **Tailwind CSS**, and **Next.js** to provide a responsive and user-friendly interface.
 
+#### NOTE : git config core.ignorecase false ( for vercel deployment)
+|
 ## Features
 - **User Authentication**: Sign up and sign-in functionality.
 - **Post Feed**: View posts with images and comments.
