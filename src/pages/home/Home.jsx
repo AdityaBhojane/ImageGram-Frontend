@@ -54,7 +54,6 @@ function Home() {
         setIsLiked(true);
     }
 
-    console.log(alert)
 
   return (
     <div>

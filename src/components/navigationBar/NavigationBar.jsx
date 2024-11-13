@@ -19,7 +19,7 @@ export default function NavigationBar() {
   const token = localStorage.getItem("token");
 
   const navigate = useNavigate();
-  console.log(isMenuOpen);
+
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>

@@ -18,8 +18,8 @@ export default function PostCard({caption,images,likes,comments,id,setAlert,aler
         />
       </CardBody>
       <div className="px-3 flex items-center justify-between">
-      <small className="text-default-500 cursor-pointer" onClick={()=>postLike(id)}>Likes <span>{likes.length}</span></small>
-      <small className="text-default-500"><CommentModel id={id} comments={comments} setAlert={setAlert} alert={alert}/></small>
+      <small className="text-default-500 cursor-pointer hover:text-slate-100" onClick={()=>postLike(id)}>Likes <span>{likes.length}</span></small>
+      <small className="text-default-500 hover:text-slate-100"><CommentModel id={id} comments={comments} setAlert={setAlert} alert={alert}/></small>
       </div>
     </Card>
   );

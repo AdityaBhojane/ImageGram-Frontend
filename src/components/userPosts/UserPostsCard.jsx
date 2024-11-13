@@ -13,7 +13,7 @@ export default function UserPostsCard({ id, caption, images, likes, comments, de
       <CardBody className="overflow-visible py-2">
         <Image
           alt="Card background"
-          className="object-cover rounded-xl"
+          className="object-cover min-h-[200px] max-h-[200px] rounded-xl"
           src={`${images}`}
           width={270}
         />

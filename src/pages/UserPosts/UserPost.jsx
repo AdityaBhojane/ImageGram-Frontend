@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 import api from "../../helper/api";
 import UserPostsCard from "../../components/userPosts/UserPostsCard";
+import Loader from "../../components/loader/Loader";
 
 function UserPosts() {
   const [posts, setPosts] = useState([]);
@@ -66,15 +67,15 @@ function UserPosts() {
   }, [token,isDelete]);
 
  
-
-  console.log(posts);
   return (
     <div className="max-w-[100vw] min-h-screen h-full bg-[#858585]">
       <div className="w-[80vw] p-5 mx-auto grid grid-cols-4 gap-5 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1">
         {loading ? (
-          <div>Loading posts...</div> // Show loading message or spinner
+          <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+          <Loader />
+        </div> // Show loading message or spinner
         ) : (
-          posts.map((post) => (
+          posts?.map((post) => (
             <UserPostsCard
               key={post._id}
               id={post._id}
