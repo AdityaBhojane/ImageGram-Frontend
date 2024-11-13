@@ -26,7 +26,7 @@ const SignUp = () => {
     }
     setIsLoading(true);
     try {
-      const response = await api.post('/users/signu', {
+      const response = await api.post('/users/signup', {
         username,
         email,
         password,
