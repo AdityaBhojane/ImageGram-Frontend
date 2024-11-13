@@ -15,11 +15,11 @@ function Home() {
     const fetchPosts = async () => {
       try {
         const response = await api.get("/posts");
-        await new Promise((res) => setTimeout(res, 2000));
+        // await new Promise((res) => setTimeout(res, 1000));
         const data = response.data.data.posts;
         setPosts(data);
         setAlert(false);
-        setIsLiked(false)
+        setIsLiked(false);
       } catch (error) {
         console.error("Error fetching posts:", error);
       } finally {
@@ -27,7 +27,7 @@ function Home() {
       }
     };
     fetchPosts();
-  }, [isLiked]);
+  }, [isLiked,alert]);
 
   const [likeResponse, setLikeResponse] = useState([])
   const token = localStorage.getItem("token");
@@ -54,7 +54,7 @@ function Home() {
         setIsLiked(true);
     }
 
-    console.log(likeResponse)
+    console.log(alert)
 
   return (
     <div>

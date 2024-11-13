@@ -1,8 +1,9 @@
 // api.js
 import axios from 'axios';
+import { DB_URL } from './db';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api/v1'
+  baseURL: DB_URL
 });
 
 export default api;

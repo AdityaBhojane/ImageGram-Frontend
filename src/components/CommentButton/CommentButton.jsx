@@ -12,7 +12,7 @@ function CommentButton({ id, comments,setAlert,alert }) {
 
 
   const token = localStorage.getItem("token");
-  console.log(comments)
+  // console.log(comments)
   useEffect(() => {
     if (!comments || comments.length === 0) return;
   
@@ -36,7 +36,7 @@ function CommentButton({ id, comments,setAlert,alert }) {
   }, [comments]); 
   
 
-  console.log(comment);
+  // console.log(comment);
 
   // Function to handle new comment submission
   const handleCommentSubmit = async () => {
@@ -92,6 +92,7 @@ function CommentButton({ id, comments,setAlert,alert }) {
   return (
     <>
    {loading?  <Loader/>:<div className="w-full h-[400px] overflow-scroll" style={{ maxWidth: "600px", margin: "auto", padding: "1rem" }}>
+    <div className="">
       <h3>Comments</h3>
       {alert && <Chip color="success" className="text-md p-5 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] transition-all z-50">Comment Added !</Chip>}
       {/* Comment input */}
@@ -107,6 +108,7 @@ function CommentButton({ id, comments,setAlert,alert }) {
       <Button auto onPress={handleCommentSubmit}>
         Submit Comment
       </Button>
+    </div>
 
       <Spacer y={2} />
 
